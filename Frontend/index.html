@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>My Pokédex</h1>
+  <input type="text" id="search" placeholder="Search Pokémon...">
+  <h2>Add Pokémon</h2>
+<form id="addForm">
+  <input type="text" name="name" placeholder="Name" required />
+  <input type="text" name="type1" placeholder="Type 1" required />
+  <input type="text" name="type2" placeholder="Type 2 (optional)" />
+  <input type="number" name="hp" placeholder="HP" required />
+  <input type="number" name="attack" placeholder="Attack" required />
+  <input type="number" name="defense" placeholder="Defense" required />
+  <input type="number" name="speed" placeholder="Speed" required />
+  <input type="text" name="image_url" placeholder="Image filename (e.g., pikachu.png)" required />
+  <button type="submit">Add Pokémon</button>
+</form>
+
+  <select id="sort">
+  <option value="">Sort By</option>
+  <option value="name">Name (A-Z)</option>
+  <option value="attack">Attack (High to Low)</option>
+  <option value="speed">Speed (High to Low)</option>
+</select>
+
+  <div id="cards-container"></div>
+<div id="compareModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <h2>Pokémon Comparison</h2>
+    <div class="compare-grid" id="compareGrid">
+     </div>
+  </div>
+</div>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
